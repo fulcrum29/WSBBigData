@@ -11,4 +11,4 @@
 - Number of DataNodes usually one per node managing storage attached to the node(s)
 - Data never flows through NameNode
 
-[<img src="HDFS.png"]()
+[<img src="HDFS.png">]()
