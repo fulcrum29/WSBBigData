@@ -1,8 +1,8 @@
 -- Load the ratings data
-ratings = LOAD 'ratings.csv' USING PigStorage(',') AS (userId:int, movieId:int, rating:double, timestamp:long);
+ratings = LOAD '$rating-file' USING PigStorage(',') AS (userId:int, movieId:int, rating:double, timestamp:long);
 
 -- Load the movies data
-movies = LOAD 'movies.csv' USING PigStorage(',') AS (movieId:int, title:chararray, genres:chararray);
+movies = LOAD '$movies-file' USING PigStorage(',') AS (movieId:int, title:chararray, genres:chararray);
 
 -- Group the ratings by movieId
 grouped_ratings = GROUP ratings BY movieId;
